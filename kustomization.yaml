@@ -2,3 +2,4 @@ resources:
 - serviceaccount.yaml
 - deployment.yaml
 - service.yaml
+- route.yaml
