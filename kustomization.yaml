@@ -1,12 +1,13 @@
-apiVersion: v1
-items:
-- apiVersion: kustomize.config.k8s.io/v1beta1
-  - ../base
-  kind: Kustomization
-  resources:
-  - serviceaccount.yaml
-  - deployment.yaml
-  - service.yaml
-  - route.yaml
-kind: List
-metadata: {}
+apiVersion: kustomize.config.k8s.io/v1beta1
+bases:
+- ../base
+kind: Kustomization
+namespace: pehue-receptoria-dev
+patches:
+- path: ./deployment-patches.yaml
+  target:
+    kind: Deployment
+    name: pehuen-receptoria
+resources:
+- ./buildconfig.yaml
+- ./route.yaml
