@@ -1,5 +1,15 @@
-resources:
-- serviceaccount.yaml
-- deployment.yaml
-- service.yaml
-- route.yaml
+
+
+
+apiVersion: v1
+items:
+- apiVersion: kustomize.config.k8s.io/v1beta1
+  - ../base
+  kind: Kustomization
+  resources:
+  - serviceaccount.yaml
+  - deployment.yaml
+  - service.yaml
+  - route.yaml
+kind: List
+metadata: {}
