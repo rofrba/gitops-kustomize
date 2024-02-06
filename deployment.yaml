@@ -41,11 +41,6 @@ spec:
               fieldRef:
                 apiVersion: v1
                 fieldPath: status.podIP
-          - name: TEST
-            valueFrom:
-              configMapKeyRef:
-                name: test
-                key: test
         securityContext: {}
         imagePullPolicy: IfNotPresent
         resources: 
