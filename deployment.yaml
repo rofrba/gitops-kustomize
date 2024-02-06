@@ -41,6 +41,10 @@ spec:
               fieldRef:
                 apiVersion: v1
                 fieldPath: status.podIP
+          - name: TEST
+            valueFrom:
+              configMap:
+                name: test
         securityContext: {}
         imagePullPolicy: IfNotPresent
         resources: 
