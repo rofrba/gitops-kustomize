@@ -43,7 +43,7 @@ spec:
                 fieldPath: status.podIP
           - name: TEST
             valueFrom:
-              configMap:
+              configMapKeyRef:
                 name: test
         securityContext: {}
         imagePullPolicy: IfNotPresent
