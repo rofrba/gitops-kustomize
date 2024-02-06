@@ -45,6 +45,7 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: test
+                key: test
         securityContext: {}
         imagePullPolicy: IfNotPresent
         resources: 
