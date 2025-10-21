@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/rofrba/gitops-kustomize.git # Usa tu propio repo de prueba
     targetRevision: develop
-    path: .
+    path: kustomize
     kustomize:
       namePrefix: app-86-
   destination:
